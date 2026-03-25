@@ -337,7 +337,7 @@
     .dest-scroll { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; }
     .dest-scroll::-webkit-scrollbar { display: none; }
     .dest-card { flex-shrink: 0; width: 130px; height: 90px; border-radius: 10px; position: relative; overflow: hidden; }
-    .dest-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 32px; }
+    .dest-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
     .dest-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.0) 55%); }
     .dest-name { position: absolute; bottom: 8px; left: 10px; font-size: 12px; font-weight: 700; color: #fff; }
     .dest-price { position: absolute; bottom: 22px; left: 10px; font-size: 9px; color: rgba(255,255,255,0.8); font-weight: 500; }
@@ -714,31 +714,34 @@
             <div class="section-heading">Discover Our Destinations</div>
             <div class="dest-scroll">
               <div class="dest-card">
-                <div class="dest-bg" style="background:linear-gradient(135deg,#E8C87A,#8B6914);">🌄</div>
+                <div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1643792412669-f7900db4e0c1?w=300&h=200&fit=crop&auto=format&q=80');background-color:#6B7A3A;"></div>
                 <div class="dest-scrim"></div>
                 <div class="dest-price">from 89,000 KZT</div>
                 <div class="dest-name">Batumi</div>
               </div>
               <div class="dest-card">
-                <div class="dest-bg" style="background:linear-gradient(135deg,#B0C4E0,#3A6090);">🏙️</div>
+                <div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1596306499398-8d88944a5ec4?w=300&h=200&fit=crop&auto=format&q=80');background-color:#3A5080;"></div>
                 <div class="dest-scrim"></div>
                 <div class="dest-price">from 54,000 KZT</div>
                 <div class="dest-name">Baku</div>
               </div>
               <div class="dest-card">
-                <div class="dest-bg" style="background:linear-gradient(135deg,#D4B896,#806040);">🕌</div>
+                <!-- Dubai Burj Khalifa + Burj Al Arab skyline / Unsplash -->
+                <div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=300&h=200&fit=crop&auto=format&q=80');background-color:#806040;"></div>
                 <div class="dest-scrim"></div>
                 <div class="dest-price">from 112,000 KZT</div>
                 <div class="dest-name">Dubai</div>
               </div>
               <div class="dest-card">
-                <div class="dest-bg" style="background:linear-gradient(135deg,#A8C4E8,#3060A0);">🎡</div>
+                <!-- London Big Ben + Thames at sunset / Unsplash -->
+                <div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=300&h=200&fit=crop&auto=format&q=80');background-color:#3060A0;"></div>
                 <div class="dest-scrim"></div>
                 <div class="dest-price">from 237,000 KZT</div>
                 <div class="dest-name">London</div>
               </div>
               <div class="dest-card">
-                <div class="dest-bg" style="background:linear-gradient(135deg,#C8E0B0,#4A8040);">🏔️</div>
+                <!-- Tbilisi: aerial old town -->
+                <div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1603350576276-24747f7bbf40?w=300&h=200&fit=crop&auto=format&q=80');background-color:#6B5040;"></div>
                 <div class="dest-scrim"></div>
                 <div class="dest-price">from 78,000 KZT</div>
                 <div class="dest-name">Tbilisi</div>
