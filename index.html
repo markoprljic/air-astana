@@ -666,6 +666,120 @@
     .change-text strong { color: var(--navy); font-weight: 600; }
 
     svg { display: block; }
+
+    /* ════════════════════════════════════════
+       BATUMI DESTINATION SCREEN
+    ════════════════════════════════════════ */
+
+    .screen-batumi-root { background: var(--bg); position: relative; }
+
+    /* Hero */
+    .dest-hero { height: 170px; position: relative; overflow: hidden; flex-shrink: 0; }
+    .dest-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .dest-hero-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.12) 60%, transparent 100%); }
+    .dest-hero-text { position: absolute; bottom: 12px; left: 16px; color: #fff; font-size: 17px; font-weight: 800; line-height: 1.2; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+    .dest-hero-sub { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.85); margin-top: 2px; }
+    .dest-hero-badge {
+      position: absolute; top: 12px; right: 12px;
+      background: var(--gold); color: #fff;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: 5px; padding: 4px 8px;
+    }
+    .dest-hero-back {
+      position: absolute; top: 12px; left: 12px;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+    .dest-hero-back svg { width: 18px; height: 18px; fill: #fff; display: block; }
+
+    /* Breadcrumbs */
+    .dest-breadcrumbs { font-size: 10.5px; color: var(--gray-text); padding: 10px 16px 2px; }
+    .dest-breadcrumbs span { color: var(--navy); font-weight: 600; }
+
+    /* Mini booking widget */
+    .mini-widget { background: var(--white); padding: 14px 16px 16px; margin-bottom: 8px; }
+    .mini-widget-tabs { display: flex; gap: 0; margin-bottom: 12px; border: 1.5px solid var(--gray-border); border-radius: 8px; overflow: hidden; }
+    .mini-tab { flex: 1; text-align: center; padding: 7px 0; font-size: 12px; font-weight: 600; color: var(--gray-text); background: var(--bg); cursor: pointer; }
+    .mini-tab.active { background: var(--navy); color: #fff; }
+    .mini-route-box { border: 1.5px solid var(--gray-border); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+    .mini-route-row { display: flex; align-items: center; padding: 10px 12px; position: relative; }
+    .mini-route-row:first-child { border-bottom: 1px solid var(--gray-border); }
+    .mini-route-icon { width: 24px; flex-shrink: 0; }
+    .mini-route-icon svg { width: 15px; height: 15px; fill: var(--gold); display: block; }
+    .mini-route-info { flex: 1; }
+    .mini-route-label { font-size: 9.5px; color: var(--gray-text); font-weight: 600; margin-bottom: 1px; }
+    .mini-route-val { font-size: 13px; font-weight: 700; color: var(--navy); }
+    .mini-swap-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 2; width: 26px; height: 26px; border-radius: 50%; background: var(--white); border: 1.5px solid var(--gray-border); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .mini-swap-btn svg { width: 14px; height: 14px; fill: var(--gold); display: block; }
+    .mini-date-row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .mini-date-field { flex: 1; border: 1.5px solid var(--gray-border); border-radius: 10px; padding: 10px 10px; background: var(--bg); display: flex; align-items: center; gap: 6px; }
+    .mini-date-cal svg { width: 14px; height: 14px; fill: var(--gold); display: block; flex-shrink: 0; }
+    .mini-date-inner { flex: 1; }
+    .mini-date-label { font-size: 9.5px; font-weight: 600; color: var(--gray-text); margin-bottom: 2px; }
+    .mini-date-val { font-size: 12.5px; color: #C4C7D0; font-weight: 500; }
+    .mini-pax-field { border: 1.5px solid var(--gray-border); border-radius: 10px; padding: 10px 12px; background: var(--bg); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .mini-pax-left { display: flex; align-items: center; gap: 8px; }
+    .mini-pax-left svg { width: 14px; height: 14px; fill: var(--gold); display: block; }
+    .mini-pax-label { font-size: 9.5px; color: var(--gray-text); font-weight: 600; margin-bottom: 1px; }
+    .mini-pax-val { font-size: 13px; color: var(--navy); font-weight: 600; }
+    .mini-pax-chev svg { width: 16px; height: 16px; fill: #ccc; display: block; }
+    .mini-refundable { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--gray-border); }
+    .mini-refundable input[type="checkbox"] { accent-color: var(--navy); width: 14px; height: 14px; }
+    .mini-refundable label { font-size: 12px; color: var(--navy); }
+    .mini-nomad-link { font-size: 11px; color: var(--gold); font-weight: 600; margin-bottom: 12px; display: block; }
+    .mini-search-btn { width: 100%; background: var(--navy); color: #fff; border: none; border-radius: 10px; padding: 13px; font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: 0.02em; }
+
+    /* Helpful travel card (reframed insurance) */
+    .helpful-card { background: var(--white); padding: 14px 16px; margin-bottom: 8px; }
+    .helpful-card-inner { border: 1.5px solid var(--gray-border); border-radius: 10px; overflow: hidden; }
+    .helpful-card-photo { height: 90px; background-size: cover; background-position: center; position: relative; }
+    .helpful-card-photo-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%); }
+    .helpful-card-body { padding: 12px 14px 14px; }
+    .helpful-card-eyebrow { font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .helpful-card-title { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+    .helpful-card-body-text { font-size: 12px; color: var(--gray-text); line-height: 1.45; margin-bottom: 12px; }
+    .helpful-card-link { display: inline-block; font-size: 11.5px; font-weight: 600; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 8px; padding: 7px 12px; }
+
+    /* Destination highlights grid */
+    .highlights-section { background: var(--white); padding: 14px 16px; margin-bottom: 8px; }
+    .highlights-title { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .highlight-card { border-radius: 10px; overflow: hidden; position: relative; height: 108px; }
+    .highlight-card-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .highlight-card-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 55%); }
+    .highlight-card-title { position: absolute; bottom: 8px; left: 10px; right: 10px; color: #fff; font-size: 11px; font-weight: 700; line-height: 1.2; }
+
+    /* Article card */
+    .article-card { background: var(--white); margin-bottom: 8px; overflow: hidden; }
+    .article-card-photo { height: 110px; background-size: cover; background-position: center; }
+    .article-card-body { padding: 12px 16px 14px; }
+    .article-card-eyebrow { font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .article-card-title { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
+    .article-card-excerpt { font-size: 12px; color: var(--gray-text); line-height: 1.4; margin-bottom: 12px; }
+    .article-card-btn { display: inline-block; font-size: 11.5px; font-weight: 700; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 8px; padding: 7px 14px; letter-spacing: 0.02em; }
+
+    /* Related topics */
+    .related-section { background: var(--white); padding: 0 16px; margin-bottom: 8px; }
+    .related-section-title { font-size: 13px; font-weight: 800; color: var(--navy); padding: 14px 0 8px; border-bottom: 1px solid var(--gray-border); }
+    .related-topic-row { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--gray-border); cursor: pointer; }
+    .related-topic-row:last-child { border-bottom: none; }
+    .related-topic-thumb { width: 44px; height: 44px; border-radius: 8px; flex-shrink: 0; background-size: cover; background-position: center; }
+    .related-topic-label { flex: 1; font-size: 12.5px; font-weight: 600; color: var(--navy); }
+    .related-topic-chev svg { width: 16px; height: 16px; fill: #ccc; display: block; }
+
+    /* Sticky booking bar */
+    .sticky-book-bar {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: var(--white); border-top: 1px solid var(--gray-border);
+      padding: 10px 16px; display: flex; align-items: center; justify-content: space-between;
+      z-index: 20; box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+    }
+    .sbb-left { display: flex; flex-direction: column; }
+    .sbb-price { font-size: 14px; font-weight: 800; color: var(--navy); }
+    .sbb-sub { font-size: 10px; color: var(--gray-text); margin-top: 1px; }
+    .sbb-btn { background: var(--gold); color: #fff; border: none; border-radius: 9px; padding: 10px 18px; font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: 0.02em; }
+
   </style>
 </head>
 <body>
@@ -772,7 +886,7 @@
           <div class="card-block">
             <div class="section-heading">Discover Our Destinations</div>
             <div class="dest-scroll">
-              <div class="dest-card">
+              <div class="dest-card" onclick="navigate('batumi')" style="cursor:pointer;">
                 <div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1643792412669-f7900db4e0c1?w=300&h=200&fit=crop&auto=format&q=80');background-color:#6B7A3A;"></div>
                 <div class="dest-scrim"></div>
                 <div class="dest-price">from 89,000 KZT</div>
@@ -1172,6 +1286,215 @@
         </div>
       </div>
 
+      <!-- ══════════════════════════════════
+           SCREEN: BATUMI DESTINATION
+      ══════════════════════════════════ -->
+      <div id="screen-batumi" class="screen-content screen-batumi-root">
+
+        <!-- Hero -->
+        <div class="dest-hero">
+          <div class="dest-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1643792412669-f7900db4e0c1?w=600&h=340&fit=crop&auto=format&q=85'); background-color:#6B7A3A;"></div>
+          <div class="dest-hero-scrim"></div>
+          <div class="dest-hero-back" onclick="navigate('home')">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </div>
+          <div class="dest-hero-badge">Seasonal · Jun – Sep</div>
+          <div class="dest-hero-text">
+            Fly Almaty → Batumi
+            <div class="dest-hero-sub">from 97,275 KZT · 3 flights/week</div>
+          </div>
+        </div>
+
+        <!-- Scrollable content -->
+        <div class="scroll-area" style="flex:1; overflow-y:auto; padding-bottom:72px;">
+
+          <!-- Breadcrumbs -->
+          <div class="dest-breadcrumbs">Home › Our Destinations › <span>Flights to Batumi</span></div>
+
+          <!-- ① Mini booking widget (above editorial, per audit) -->
+          <div class="mini-widget">
+            <div class="mini-widget-tabs">
+              <div class="mini-tab active">Return</div>
+              <div class="mini-tab">One Way</div>
+            </div>
+
+            <!-- Route -->
+            <div class="mini-route-box">
+              <div class="mini-route-row">
+                <div class="mini-route-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(45,12,12)"/></svg>
+                </div>
+                <div class="mini-route-info">
+                  <div class="mini-route-label">FROM</div>
+                  <div class="mini-route-val">Almaty (ALA)</div>
+                </div>
+              </div>
+              <div class="mini-route-row">
+                <div class="mini-route-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(-135,12,12)"/></svg>
+                </div>
+                <div class="mini-route-info">
+                  <div class="mini-route-label">TO</div>
+                  <div class="mini-route-val">Batumi (BUS)</div>
+                </div>
+                <div class="mini-swap-btn">
+                  <svg viewBox="0 0 24 24"><path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dates with calendar icon -->
+            <div class="mini-date-row">
+              <div class="mini-date-field">
+                <div class="mini-date-cal">
+                  <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                </div>
+                <div class="mini-date-inner">
+                  <div class="mini-date-label">DEPART</div>
+                  <div class="mini-date-val">DD / MM / YYYY</div>
+                </div>
+              </div>
+              <div class="mini-date-field">
+                <div class="mini-date-cal">
+                  <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                </div>
+                <div class="mini-date-inner">
+                  <div class="mini-date-label">RETURN</div>
+                  <div class="mini-date-val">DD / MM / YYYY</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Passengers -->
+            <div class="mini-pax-field">
+              <div class="mini-pax-left">
+                <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-5.33 0-8 2.67-8 4v1h16v-1c0-1.33-2.67-4-8-4z"/></svg>
+                <div>
+                  <div class="mini-pax-label">PASSENGERS</div>
+                  <div class="mini-pax-val">1 Adult · Economy</div>
+                </div>
+              </div>
+              <div class="mini-pax-chev"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg></div>
+            </div>
+
+            <!-- Refundable only -->
+            <div class="mini-refundable">
+              <input type="checkbox" id="refundable">
+              <label for="refundable">Refundable tickets only</label>
+            </div>
+
+            <!-- Nomad join prompt (no checkbox for guests) -->
+            <a class="mini-nomad-link">Join Nomad Club to pay with points →</a>
+
+            <button class="mini-search-btn">SEARCH FLIGHTS</button>
+          </div>
+
+          <!-- ② Editorial card -->
+          <div class="card-block" style="margin-bottom:8px;">
+            <div style="font-size:15px; font-weight:800; color:var(--navy); margin-bottom:8px; line-height:1.3;">Batumi: Where the Mountains Meet the Sea</div>
+            <div style="font-size:12px; color:var(--gray-text); line-height:1.55; margin-bottom:10px;">Batumi is Georgia's most cosmopolitan seaside city — a place where Soviet-era boulevards meet gleaming towers, ancient churches face modern sculpture, and the Black Sea laps at a broad pebbly shore backed by the Caucasus mountains.</div>
+            <div style="font-size:12px; color:var(--gray-text); line-height:1.55; margin-bottom:12px;">Whether you're drawn by the architecture, the food, the nightlife, or simply the warm waters, Batumi rewards the curious traveller at every turn.</div>
+            <div style="display:flex; align-items:flex-start; gap:8px; background:rgba(155,123,58,0.06); border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+              <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--gold);flex-shrink:0;margin-top:1px;display:block;"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg>
+              <div>
+                <div style="font-size:11px; font-weight:700; color:var(--navy); margin-bottom:2px;">Fares from 97,275 KZT / 194.90 USD one-way</div>
+                <div style="font-size:11px; color:var(--gray-text);">Wed, Fri, Sun from Almaty · 5× weekly from July</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ③ Helpful travel tip (reframed insurance — per audit) -->
+          <div class="helpful-card">
+            <div class="helpful-card-inner">
+              <div class="helpful-card-photo" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=180&fit=crop&auto=format&q=80');">
+                <div class="helpful-card-photo-scrim"></div>
+              </div>
+              <div class="helpful-card-body">
+                <div class="helpful-card-eyebrow">Travel Tip</div>
+                <div class="helpful-card-title">Heading to Georgia?</div>
+                <div class="helpful-card-body-text">Medical insurance is required for entry to Georgia. Check your existing policy covers Georgia — or arrange cover before you fly.</div>
+                <a class="helpful-card-link">Find out more about travel insurance →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ④ Destination highlights (image card grid — per audit) -->
+          <div class="highlights-section">
+            <div class="highlights-title">Discover Batumi</div>
+            <div class="highlight-grid">
+
+              <div class="highlight-card">
+                <div class="highlight-card-bg" style="background-image:url('https://images.unsplash.com/photo-1565008576549-57569a49d956?w=300&h=220&fit=crop&auto=format&q=80');"></div>
+                <div class="highlight-card-scrim"></div>
+                <div class="highlight-card-title">Batumi Boulevard</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-card-bg" style="background-image:url('https://images.unsplash.com/photo-1600950207944-0d63e8edbc3f?w=300&h=220&fit=crop&auto=format&q=80');"></div>
+                <div class="highlight-card-scrim"></div>
+                <div class="highlight-card-title">Old Town Batumi</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-card-bg" style="background-image:url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=300&h=220&fit=crop&auto=format&q=80');"></div>
+                <div class="highlight-card-scrim"></div>
+                <div class="highlight-card-title">Ali &amp; Nino Statue</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-card-bg" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=300&h=220&fit=crop&auto=format&q=80');"></div>
+                <div class="highlight-card-scrim"></div>
+                <div class="highlight-card-title">Botanical Garden</div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ⑤ Article card -->
+          <div class="article-card">
+            <div class="article-card-photo" style="background-image:url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&h=220&fit=crop&auto=format&q=80');"></div>
+            <div class="article-card-body">
+              <div class="article-card-eyebrow">Travel Story</div>
+              <div class="article-card-title">My Journey to Batumi — A Week on the Black Sea</div>
+              <div class="article-card-excerpt">From sunrise over the port to late-night churchkhela markets, one traveller's guide to getting the most from Georgia's coastal gem.</div>
+              <a class="article-card-btn">READ ARTICLE</a>
+            </div>
+          </div>
+
+          <!-- ⑥ Related topics -->
+          <div class="related-section">
+            <div class="related-section-title">Related Topics</div>
+            <div class="related-topic-row">
+              <div class="related-topic-thumb" style="background-image:url('https://images.unsplash.com/photo-1603350576276-24747f7bbf40?w=100&h=100&fit=crop&auto=format&q=80');"></div>
+              <div class="related-topic-label">Flights to Tbilisi</div>
+              <div class="related-topic-chev"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg></div>
+            </div>
+            <div class="related-topic-row">
+              <div class="related-topic-thumb" style="background-image:url('https://images.unsplash.com/photo-1596306499398-8d88944a5ec4?w=100&h=100&fit=crop&auto=format&q=80');"></div>
+              <div class="related-topic-label">Flights to Baku</div>
+              <div class="related-topic-chev"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg></div>
+            </div>
+            <div class="related-topic-row">
+              <div class="related-topic-thumb" style="background-image:url('https://images.unsplash.com/photo-1539668816559-ea280d963bcf?w=100&h=100&fit=crop&auto=format&q=80');"></div>
+              <div class="related-topic-label">Nomad Club — earn miles on every flight</div>
+              <div class="related-topic-chev"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg></div>
+            </div>
+          </div>
+
+          <div style="height:16px;"></div>
+        </div>
+
+        <!-- ⑦ Sticky booking bar -->
+        <div class="sticky-book-bar">
+          <div class="sbb-left">
+            <div class="sbb-price">Book from 97,275 KZT</div>
+            <div class="sbb-sub">Almaty → Batumi · from June</div>
+          </div>
+          <button class="sbb-btn">BOOK NOW</button>
+        </div>
+
+      </div>
+
       <!-- ── Bottom nav (shared, always visible) ── -->
       <div class="bottom-nav">
         <div class="nav-item active" data-tab="home" onclick="navigate('home')">
@@ -1226,6 +1549,26 @@
       <div class="change-dot"></div>
       <div class="change-text"><strong>Profile:</strong> Redesigned as a functional auth screen. Sign In (primary) above Create Account (secondary) — button hierarchy corrected. Three-item benefit strip added. App Settings, Help &amp; Feedback and Contacts moved here from Menu.</div>
     </div>
+    <div class="change-item">
+      <div class="change-dot"></div>
+      <div class="change-text"><strong>Batumi destination screen — Booking form placement:</strong> Mini booking widget surfaced as first content element above editorial copy. Sticky "Book from 97,275 KZT" bar persists throughout the page scroll.</div>
+    </div>
+    <div class="change-item">
+      <div class="change-dot"></div>
+      <div class="change-text"><strong>Batumi destination screen — Seasonal route info:</strong> "Seasonal · Jun – Sep" badge overlaid on the hero image — no longer buried in page footer.</div>
+    </div>
+    <div class="change-item">
+      <div class="change-dot"></div>
+      <div class="change-text"><strong>Batumi destination screen — Booking form usability:</strong> Calendar icon and date format placeholder (DD / MM / YYYY) added to both date fields. Currency display defaults to KZT — per-session checkbox removed. "Buy with Nomad Points" checkbox hidden for guests; replaced with "Join Nomad Club to pay with points →" prompt.</div>
+    </div>
+    <div class="change-item">
+      <div class="change-dot"></div>
+      <div class="change-text"><strong>Batumi destination screen — Insurance upsell reframed:</strong> Pressure headline removed. Reframed as a travel tip: "Heading to Georgia? Medical insurance is required for entry." CTA demoted to a secondary gold-outline link. AI-generated imagery replaced with authentic Unsplash photography.</div>
+    </div>
+    <div class="change-item">
+      <div class="change-dot"></div>
+      <div class="change-text"><strong>Batumi destination screen — Destination highlights:</strong> Plain-text paragraphs replaced with a 2×2 image card grid. Each card features an Unsplash destination photo with a dark gradient scrim ensuring WCAG 2.1 AA contrast compliance for overlaid text.</div>
+    </div>
   </div>
 
   <script>
@@ -1240,7 +1583,8 @@
         </div>`,
       book: `<div class="top-bar-title">Book Flights</div>`,
       mytrips: `<div class="top-bar-title">My Trips</div>`,
-      profile: `<div class="top-bar-title">Profile</div>`
+      profile: `<div class="top-bar-title">Profile</div>`,
+      batumi: `<div style="display:flex;align-items:center;justify-content:space-between;width:100%;"></div>`
     };
 
     function navigate(tab) {
@@ -1248,9 +1592,17 @@
       document.querySelectorAll('.screen-content').forEach(el => el.classList.remove('active'));
       document.getElementById('screen-' + tab).classList.add('active');
 
-      // Update nav
+      // Hide bottom nav and home indicator for detail screens (Batumi)
+      const bottomNav = document.querySelector('.bottom-nav');
+      const homeInd = document.querySelector('.home-ind');
+      const isDetailScreen = tab === 'batumi';
+      if (bottomNav) bottomNav.style.display = isDetailScreen ? 'none' : '';
+      if (homeInd) homeInd.style.display = isDetailScreen ? 'none' : '';
+
+      // Update nav active state (only for primary tabs)
       document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      const navItem = document.querySelector('[data-tab="' + tab + '"]');
+      if (navItem) navItem.classList.add('active');
 
       // Update top bar
       document.getElementById('topbar').innerHTML = topBarContent[tab] || '';
