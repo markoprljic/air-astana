@@ -780,6 +780,410 @@
     .sbb-sub { font-size: 10px; color: var(--gray-text); margin-top: 1px; }
     .sbb-btn { background: var(--gold); color: #fff; border: none; border-radius: 9px; padding: 10px 18px; font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: 0.02em; }
 
+    /* ── Onboarding ── */
+    .onboarding-screen {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .ob-step {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .ob-step.active {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* Step 0 — Welcome (light bg) */
+    .ob-welcome {
+      background: var(--white);
+    }
+    /* Shared top header: [spacer] [dots] [skip] */
+    .ob-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px 0;
+      flex-shrink: 0;
+    }
+    .ob-header-spacer {
+      width: 36px;
+    }
+    .ob-skip-btn-dark {
+      background: none;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      cursor: pointer;
+      padding: 4px 0;
+      letter-spacing: 0.01em;
+      width: 36px;
+      text-align: right;
+    }
+    .ob-welcome-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 28px 24px;
+      text-align: center;
+    }
+    .ob-icon-circle-light {
+      width: 72px; height: 72px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      flex-shrink: 0;
+    }
+    .ob-icon-circle-light svg { width: 34px; height: 34px; fill: var(--gold); display: block; }
+    .ob-welcome-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+    .ob-welcome-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    .ob-benefit-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg);
+      border: 1px solid var(--gray-border);
+      border-radius: 10px;
+      padding: 10px 14px;
+    }
+    .ob-benefit-check {
+      width: 20px; height: 20px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ob-benefit-check svg { width: 11px; height: 11px; fill: var(--gold); display: block; }
+    .ob-benefit-text { font-size: 13px; font-weight: 600; color: var(--navy); }
+
+    /* Step 1 — Features (white bg) */
+    .ob-features {
+      background: var(--white);
+    }
+    .ob-features-header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 14px 18px 0;
+      flex-shrink: 0;
+    }
+    .ob-features-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 12px 18px 0;
+      overflow: hidden;
+    }
+    .ob-feature-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+      line-height: 1.25;
+      letter-spacing: -0.2px;
+    }
+    .ob-feature-body {
+      font-size: 12.5px;
+      color: var(--gray-text);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .ob-app-mockup {
+      flex: 1;
+      border: 1.5px solid var(--gray-border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .ob-mockup-topbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-border);
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .ob-mockup-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .ob-mockup-title { font-size: 10px; font-weight: 700; color: var(--navy); flex: 1; text-align: center; }
+    .ob-mockup-content { padding: 10px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+    .ob-mockup-card {
+      background: var(--white);
+      border-radius: 9px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--gray-border);
+    }
+    .ob-mockup-card-icon {
+      width: 28px; height: 28px;
+      background: var(--gold-light);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ob-mockup-card-icon svg { width: 14px; height: 14px; fill: var(--gold); display: block; }
+    .ob-mockup-card-info { flex: 1; }
+    .ob-mockup-card-label { font-size: 9px; font-weight: 700; color: var(--gray-text); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+    .ob-mockup-card-val { font-size: 11px; font-weight: 700; color: var(--navy); }
+    .ob-mockup-route-box {
+      background: var(--white);
+      border-radius: 9px;
+      border: 1px solid var(--gray-border);
+      overflow: hidden;
+    }
+    .ob-mockup-route-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+    }
+    .ob-mockup-route-row:first-child { border-bottom: 1px solid var(--gray-border); }
+    .ob-mockup-route-row svg { width: 12px; height: 12px; fill: var(--gold); flex-shrink: 0; }
+    .ob-mockup-route-label { font-size: 8.5px; color: var(--gray-text); font-weight: 600; width: 22px; }
+    .ob-mockup-route-val { font-size: 11px; font-weight: 700; color: var(--navy); }
+    .ob-mockup-search-btn {
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 9px;
+      font-size: 10px;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    /* Feature grid — slide 1 */
+    .ob-feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      flex: 1;
+      min-height: 0;
+      align-content: start;
+    }
+    .ob-feature-tile {
+      background: var(--bg);
+      border: 1px solid var(--gray-border);
+      border-radius: 14px;
+      padding: 16px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ob-feature-tile-icon {
+      width: 36px; height: 36px;
+      background: var(--gold-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ob-feature-tile-icon svg { width: 18px; height: 18px; fill: var(--gold); display: block; }
+    .ob-feature-tile-name {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .ob-feature-tile-desc {
+      font-size: 11px;
+      color: var(--gray-text);
+      line-height: 1.4;
+    }
+
+    /* Step 2 — Location rationale (white bg) */
+    .ob-location {
+      background: var(--white);
+    }
+    .ob-location-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 26px 24px;
+      text-align: center;
+    }
+    .ob-location-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.25;
+      letter-spacing: -0.2px;
+    }
+    .ob-location-body-text {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+    .ob-location-note {
+      background: var(--gold-light);
+      border-radius: 9px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      text-align: left;
+      width: 100%;
+    }
+    .ob-location-note svg { width: 14px; height: 14px; fill: var(--gold); flex-shrink: 0; margin-top: 1px; display: block; }
+    .ob-location-note-text { font-size: 11.5px; color: var(--navy); font-weight: 600; line-height: 1.4; }
+
+    /* Step 3 — Auth screen */
+    .ob-auth {
+      background: var(--white);
+    }
+    .ob-auth-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 22px 28px;
+      text-align: center;
+    }
+    .ob-auth-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .ob-auth-sub {
+      font-size: 12.5px;
+      color: var(--gray-text);
+      line-height: 1.45;
+      margin-bottom: 16px;
+    }
+    .ob-guest-link {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--gold);
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-top: 4px;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Shared bottom actions bar */
+    .ob-actions {
+      flex-shrink: 0;
+      padding: 16px 20px 20px;
+      background: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ob-actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .ob-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ob-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gray-border);
+      transition: background 0.2s, width 0.2s;
+    }
+    .ob-dot.active {
+      background: var(--gold);
+      width: 18px;
+      border-radius: 4px;
+    }
+    .ob-btn-primary {
+      flex: 1;
+      padding: 13px 20px;
+      background: var(--navy);
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+    }
+    .ob-btn-primary-gold {
+      flex: 1;
+      padding: 13px 20px;
+      background: var(--gold-mid);
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+    }
+    .ob-btn-secondary {
+      width: 100%;
+      padding: 13px;
+      background: transparent;
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .ob-btn-primary-full {
+      width: 100%;
+      padding: 14px;
+      background: var(--navy);
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+    }
+
   </style>
 </head>
 <body>
@@ -1287,6 +1691,162 @@
       </div>
 
       <!-- ══════════════════════════════════
+           SCREEN: ONBOARDING
+      ══════════════════════════════════ -->
+      <div id="screen-onboarding" class="screen-content">
+        <div class="onboarding-screen">
+
+          <!-- ── Step 0: Welcome ── -->
+          <div id="ob-step-0" class="ob-step active ob-welcome">
+            <div class="ob-header">
+              <div class="ob-header-spacer"></div>
+              <div class="ob-dots">
+                <div class="ob-dot active"></div>
+                <div class="ob-dot"></div>
+                <div class="ob-dot"></div>
+              </div>
+              <button class="ob-skip-btn-dark" onclick="skipOnboarding()">Skip</button>
+            </div>
+            <div class="ob-welcome-body">
+              <div class="ob-icon-circle-light">
+                <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+              </div>
+              <div class="ob-welcome-title">Your Journey<br>Starts Here</div>
+              <div style="height:18px;"></div>
+              <div class="ob-welcome-benefits">
+                <div class="ob-benefit-row">
+                  <div class="ob-benefit-check">
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                  </div>
+                  <span class="ob-benefit-text">Search and book flights instantly</span>
+                </div>
+                <div class="ob-benefit-row">
+                  <div class="ob-benefit-check">
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                  </div>
+                  <span class="ob-benefit-text">Manage your trips and boarding passes</span>
+                </div>
+                <div class="ob-benefit-row">
+                  <div class="ob-benefit-check">
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                  </div>
+                  <span class="ob-benefit-text">Online check-in from anywhere</span>
+                </div>
+              </div>
+            </div>
+            <div class="ob-actions">
+              <button class="ob-btn-primary-gold" style="width:100%;" onclick="goToObStep(1)">Get Started</button>
+            </div>
+          </div>
+
+          <!-- ── Step 1: Features ── -->
+          <div id="ob-step-1" class="ob-step ob-features">
+            <div class="ob-header">
+              <div class="ob-header-spacer"></div>
+              <div class="ob-dots">
+                <div class="ob-dot"></div>
+                <div class="ob-dot active"></div>
+                <div class="ob-dot"></div>
+              </div>
+              <button class="ob-skip-btn-dark" onclick="skipOnboarding()">Skip</button>
+            </div>
+            <div class="ob-features-body">
+              <div class="ob-feature-title">Everything for<br>Your Journey</div>
+              <div class="ob-feature-body">One app for every step — from finding a fare to boarding your flight.</div>
+              <div class="ob-feature-grid">
+
+                <div class="ob-feature-tile">
+                  <div class="ob-feature-tile-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                  </div>
+                  <div class="ob-feature-tile-name">Book Flights</div>
+                  <div class="ob-feature-tile-desc">Search and compare fares in seconds</div>
+                </div>
+
+                <div class="ob-feature-tile">
+                  <div class="ob-feature-tile-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                  </div>
+                  <div class="ob-feature-tile-name">Manage Trips</div>
+                  <div class="ob-feature-tile-desc">View, change or cancel any booking</div>
+                </div>
+
+                <div class="ob-feature-tile">
+                  <div class="ob-feature-tile-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                  </div>
+                  <div class="ob-feature-tile-name">Online Check-In</div>
+                  <div class="ob-feature-tile-desc">Check in up to 30 hours before departure</div>
+                </div>
+
+                <div class="ob-feature-tile">
+                  <div class="ob-feature-tile-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+                  </div>
+                  <div class="ob-feature-tile-name">Flight Status</div>
+                  <div class="ob-feature-tile-desc">Live updates on any Air Astana flight</div>
+                </div>
+
+              </div>
+            </div>
+            <div class="ob-actions">
+              <button class="ob-btn-primary-full" onclick="goToObStep(2)">Next</button>
+            </div>
+          </div>
+
+          <!-- ── Step 2: Location rationale ── -->
+          <div id="ob-step-2" class="ob-step ob-location">
+            <div class="ob-header">
+              <div class="ob-header-spacer"></div>
+              <div class="ob-dots">
+                <div class="ob-dot"></div>
+                <div class="ob-dot"></div>
+                <div class="ob-dot active"></div>
+              </div>
+              <button class="ob-skip-btn-dark" onclick="skipOnboarding()">Skip</button>
+            </div>
+            <div class="ob-location-body">
+              <div class="ob-icon-circle-light">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+              </div>
+              <div class="ob-location-title">Flights Near You, Instantly</div>
+              <div class="ob-location-body-text">Allow location access so the app can detect your nearest airport and show you relevant deals and real-time flight updates without any extra steps.</div>
+              <div class="ob-location-note">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                <span class="ob-location-note-text">We never track your location in the background. Access is only used when the app is open.</span>
+              </div>
+            </div>
+            <div class="ob-actions">
+              <button class="ob-btn-primary-full" onclick="goToObStep(3)">Allow Location</button>
+              <button class="ob-btn-secondary" onclick="goToObStep(3)">Not Now</button>
+            </div>
+          </div>
+
+          <!-- ── Step 3: Authentication ── -->
+          <div id="ob-step-3" class="ob-step ob-auth">
+            <div class="ob-auth-body">
+              <div class="profile-plane-mark" style="width:60px;height:60px;margin-bottom:16px;">
+                <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+              </div>
+              <div class="ob-auth-title">Welcome to Air Astana</div>
+              <div class="ob-auth-sub">Sign in to access your bookings,<br>boarding passes and Nomad Club miles.</div>
+              <div class="benefit-strip" style="margin-bottom:20px;">
+                <div class="benefit-pill"><span class="benefit-check">✓</span> Earn Miles</div>
+                <div class="benefit-sep">·</div>
+                <div class="benefit-pill"><span class="benefit-check">✓</span> Check-in alerts</div>
+                <div class="benefit-sep">·</div>
+                <div class="benefit-pill"><span class="benefit-check">✓</span> Manage bookings</div>
+              </div>
+              <button class="btn-signin-primary" style="margin-bottom:10px;" onclick="navigate('home')">Log In</button>
+              <button class="btn-create-secondary" style="margin-bottom:14px;" onclick="navigate('home')">Create Account</button>
+              <button class="ob-guest-link" onclick="navigate('home')">Continue as Guest</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════
            SCREEN: BATUMI DESTINATION
       ══════════════════════════════════ -->
       <div id="screen-batumi" class="screen-content screen-batumi-root">
@@ -1574,7 +2134,7 @@
   <script>
     const topBarContent = {
       home: `
-        <div class="login-block">
+        <div class="login-block" onclick="navigate('onboarding')" style="cursor:pointer;">
           <div class="login-text">
             Log in
             <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
@@ -1584,28 +2144,50 @@
       book: `<div class="top-bar-title">Book Flights</div>`,
       mytrips: `<div class="top-bar-title">My Trips</div>`,
       profile: `<div class="top-bar-title">Profile</div>`,
+      onboarding: ``,
       batumi: `<div style="display:flex;align-items:center;justify-content:space-between;width:100%;"></div>`
     };
+
+    let obStep = 0;
+
+    function goToObStep(n) {
+      obStep = n;
+      for (let i = 0; i < 4; i++) {
+        const el = document.getElementById('ob-step-' + i);
+        if (el) el.classList.toggle('active', i === n);
+      }
+    }
+
+    function skipOnboarding() {
+      goToObStep(3);
+    }
 
     function navigate(tab) {
       // Update screens
       document.querySelectorAll('.screen-content').forEach(el => el.classList.remove('active'));
       document.getElementById('screen-' + tab).classList.add('active');
 
-      // Hide bottom nav and home indicator for detail screens (Batumi)
+      // Hide bottom nav, home indicator, and top bar for detail/onboarding screens
       const bottomNav = document.querySelector('.bottom-nav');
       const homeInd = document.querySelector('.home-ind');
-      const isDetailScreen = tab === 'batumi';
+      const topBar = document.getElementById('topbar');
+      const isDetailScreen = tab === 'batumi' || tab === 'onboarding';
       if (bottomNav) bottomNav.style.display = isDetailScreen ? 'none' : '';
       if (homeInd) homeInd.style.display = isDetailScreen ? 'none' : '';
+      if (topBar) {
+        topBar.style.display = tab === 'onboarding' ? 'none' : '';
+        topBar.innerHTML = topBarContent[tab] || '';
+      }
 
       // Update nav active state (only for primary tabs)
       document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
       const navItem = document.querySelector('[data-tab="' + tab + '"]');
       if (navItem) navItem.classList.add('active');
 
-      // Update top bar
-      document.getElementById('topbar').innerHTML = topBarContent[tab] || '';
+      // Reset onboarding to step 0 when entering
+      if (tab === 'onboarding') {
+        goToObStep(0);
+      }
 
       // Reset book screen scroll state when navigating to it
       if (tab === 'book') {
